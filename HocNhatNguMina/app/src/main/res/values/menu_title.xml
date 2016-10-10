@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_bang_chu_cai">Bảng chữ cái</string>
+    <string name="menu_bai_hoc_mina">Bài học Minna Nihongo</string>
+    <string name="menu_chu_kanji">Bộ chữ Kanji cơ bản</string>
+    <string name="menu_mau_cau">Mẫu câu cơ bản</string>
+    <string name="menu_tu_yeu_thich">Từ hay dùng</string>
+    <string name="menu_phan_tich_chu_kanji">Phân tích cụm từ</string>
+    <string name="menu_che_do_binh_thuong">Chế độ bình thường</string>
+    <string name="menu_che_slide">Chế độ khác</string>
+    <string name="menu_cai_dat">Cài đặt</string>
+    <string name="bo_thu_co_ban">214 bộ thủ cơ bản</string>
+
+    <string name="menu_kiem_tra">Kiểm tra</string>
+    <string name="menu_hiragana">Hiragana</string>
+    <string name="menu_katakana">Katakana</string>
+    <string name="menu_danh_sach_bai_hoc">Danh sách bài học</string>
+    <string name="menu_tu_vung">Từ vựng</string>
+    <string name="menu_ngu_phap">Ngữ pháp</string>
+    <string name="menu_hoi_thoai">Hội thoại</string>
+    <string name="menu_van_de">Vấn đề</string>
+    <string name="menu_bai_tap">Bài tập</string>
+    <string name="menu_luyen_nghe">Luyện nghe</string>
+    <string name="menu_luyen_doc">Luyện đọc</string>
+    <string name="bai_hoc_so">Bài học số</string>
+</resources>

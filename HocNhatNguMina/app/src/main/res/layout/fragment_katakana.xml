@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.q.a.hocnhatngumina.KatakanaFragment">
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        android:padding="4dp"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"></GridView>
+</FrameLayout>

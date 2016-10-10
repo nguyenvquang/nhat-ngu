@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_bang_chu_cai">Alphabetical</string>
+    <string name="menu_bai_hoc_mina">Lession Minna Nihongo</string>
+    <string name="menu_chu_kanji">Kangi</string>
+    <string name="menu_mau_cau">Stences example</string>
+    <string name="menu_tu_yeu_thich">Favorite</string>
+    <string name="menu_phan_tich_chu_kanji">Ananytic</string>
+</resources>

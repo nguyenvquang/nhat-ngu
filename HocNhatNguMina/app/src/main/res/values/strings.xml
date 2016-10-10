@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Nhật Ngữ</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_menu_bang_chu_cai">Bảng chữ cái</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bai_hoc_mina">BaiHocMinaActivity</string>
+    <string name="title_activity_chi_tiet_bai_hoc">ChiTietBaiHocActivity</string>
+    <string name="title_activity_mau_cau">MauCauActivity</string>
+</resources>
