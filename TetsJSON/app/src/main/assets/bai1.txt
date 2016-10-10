@@ -323,7 +323,7 @@
 					]
 				},				
 				{
-					"nhan_vat":"", "noi_dung":[
+					"nhan_vat":"佐　藤", "noi_dung":[
 						{ "viet_cau":"  初めまして。", "dich_cau":"Rất vui được làm quen với Chị."},
 						{"viet_cau":"マイク・ミラーです。", "dich_cau":"Tôi là Mike Miller."},
 						{"viet_cau":"  アメリカから　来ました。", "dich_cau":"Tôi đến từ Mỹ."},
@@ -331,7 +331,7 @@
 					]
 				},
 				{
-					"nhan_vat":" 佐　藤", "noi_dung":[
+					"nhan_vat":"佐　藤", "noi_dung":[
 						{ "viet_cau":"佐藤けい子です。さとう　けいこです。", "dich_cau":"Tôi là Sato Keiko."},
 						{"viet_cau":" どうぞ　よろしく。", "dich_cau":"Rất vui được làm quen với Anh."}
 					]
