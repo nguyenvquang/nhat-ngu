@@ -14,11 +14,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Ngu phap"
+          android:onClick="nguPhapOnClick"
+          />
+
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Hoi thoai"
+            android:onClick="hoiThoaiOnClick"
+            />
     </LinearLayout>
 
 </ScrollView>
