@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_pressed="true"
-        android:drawable="@drawable/ic_bt_setting_36dp_black"/>
+        android:drawable="@drawable/ic_menu_setting_black_36dp"/>
 
-    <item android:drawable="@drawable/ic_bt_menu_36dp_blue"/>
+    <item android:drawable="@drawable/ic_menu_setting_blue_36dp"/>
 </selector>

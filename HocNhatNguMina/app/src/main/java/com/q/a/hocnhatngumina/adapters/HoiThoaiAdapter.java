@@ -55,7 +55,7 @@ public class HoiThoaiAdapter extends AbstractBaseAdapter {
         for (int k = 0; k < ht.getNoiDungs().size(); k++) {
             text += "<br/>" + ht.getNoiDungs().get(k).getVietCau() + "<br/>";
             if (mShowMean)
-            text += "<br/><font color='blue'>( "+ ht.getNoiDungs().get(k).getDichCau() + " )</font>" + "<br/>";
+            text += "<font color='blue'><small>( "+ ht.getNoiDungs().get(k).getDichCau() + " )</small></font>" + "<br/>";
         }
         ((TextView)vh.getItem(1)).setText(TextFormat.textColorDefault(text));
     }
@@ -97,7 +97,6 @@ public class HoiThoaiAdapter extends AbstractBaseAdapter {
                     ht.setNhanVat(oi.getString("nhan_vat"));
 
                     JSONArray nds = oi.getJSONArray("noi_dung");
-//                Log.i("ss", "" + nds.length());
                     for (int k = 0; k < nds.length(); k++) {
                         JSONObject ok = nds.getJSONObject(k);
                         ViDu vd = new ViDu();

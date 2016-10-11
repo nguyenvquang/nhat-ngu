@@ -59,7 +59,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.q.a.hocnhatngumina.MainActivity" />
         </activity>
-        <activity android:name=".KanjiActivity"></activity>
+        <activity android:name=".KanjiActivity" />
+
+        <service android:name=".PlayMediaService" />
+        <service
+            android:name=".PlayService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
