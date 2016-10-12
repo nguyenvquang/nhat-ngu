@@ -111,6 +111,7 @@ public abstract class AbstractBaseAdapter extends BaseAdapter  {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
+                updateUI();
                 if (pd != null && pd.isShowing()) pd.cancel();
             }
         }.execute();
@@ -123,6 +124,10 @@ public abstract class AbstractBaseAdapter extends BaseAdapter  {
 
     public interface ListViewOnItemClickListener {
         void onItemClick(int postion, View view);
+    }
+
+    public void updateUI() {
+
     }
 
 

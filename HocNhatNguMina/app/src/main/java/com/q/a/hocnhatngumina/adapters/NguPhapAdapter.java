@@ -2,6 +2,7 @@ package com.q.a.hocnhatngumina.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,16 +26,12 @@ public class NguPhapAdapter extends AbstractBaseAdapter {
     private int mLession;
 
     public NguPhapAdapter(Context mContext, int mLession) {
-        this(mContext, R.layout.item_ngu_phap, new Integer[]{
-                R.id.tvTieuDe, R.id.tvYNghia, R.id.tvCachDung, R.id.tvChuY, R.id.tvViDu
-        });
+        this(mContext, R.layout.item_ngu_phap, new Integer[]{ R.id.tvNoiDung      });
         this.mLession = mLession;
     }
 
     public NguPhapAdapter(Context mContext, ListViewOnItemClickListener mListViewOnItemClickListener) {
-        this(mContext, R.layout.item_ngu_phap, new Integer[]{
-                R.id.tvTieuDe, R.id.tvYNghia, R.id.tvCachDung, R.id.tvChuY, R.id.tvViDu
-        }, mListViewOnItemClickListener);
+        this(mContext, R.layout.item_ngu_phap, new Integer[]{ R.id.tvNoiDung }, mListViewOnItemClickListener);
     }
 
     public NguPhapAdapter(Context mContext, int mLayoutItemId, Integer[] mColumIds) {
@@ -54,45 +51,36 @@ public class NguPhapAdapter extends AbstractBaseAdapter {
     @Override
     public void changeDataViewHoler(ChildViewHoler vh, int position) {
         NguPhap np = (NguPhap)mDataSource.get(position);
-        if (np.getyNghias().size() == 0) {
-            vh.getItem(1).setVisibility(View.GONE);
-        } else {
-            vh.getItem(1).setVisibility(View.VISIBLE);
-        }
 
-        if (np.getChuYs().size() == 0) {
-            vh.getItem(3).setVisibility(View.GONE);
-        } else {
-            vh.getItem(3).setVisibility(View.VISIBLE);
-        }
-
-        if (np.getViDus().size() == 0) {
-            vh.getItem(4).setVisibility(View.GONE);
-        } else {
-            vh.getItem(4).setVisibility(View.VISIBLE);
-        }
-        ((TextView)vh.getItem(0)).setText(TextFormat.textColorDefault(np.getTieuDe()));
         String text = "";
-        for (int k = 0; k < np.getyNghias().size(); k++) {
-            text += np.getyNghias().get(k) + "<br/>";
+        text += TextFormat.textSColorBold(np.getTieuDe() + "<br/>");
+        if (np.getyNghias().size() > 0) {
+            text += TextFormat.textSUnderline("<br/>Ý nghĩa:<br/>");
+            for (int k = 0; k < np.getyNghias().size(); k++) {
+                text += "<br/>" + TextFormat.textSColorDefault(np.getyNghias().get(k)) + "<br/>";
+            }
         }
-        ((TextView)vh.getItem(1)).setText(TextFormat.textColorDefault(text));
-        text = "";
-        for (int k = 0; k < np.getCachDungs().size(); k++) {
-            text += np.getCachDungs().get(k) + "<br/>";
+        if (np.getCachDungs().size() > 0) {
+            text += TextFormat.textSUnderline("<br/>Cách dùng:<br/>");
+            for (int k = 0; k < np.getCachDungs().size(); k++) {
+                text += "<br/>" + TextFormat.textSColorDefault(np.getCachDungs().get(k)) + "<br/>";
+            }
         }
-        ((TextView)vh.getItem(2)).setText(TextFormat.textColorDefault(text));
-        text = "";
-        for (int k = 0; k < np.getChuYs().size(); k++) {
-            text += np.getChuYs().get(k) + "<br/>";
+
+       if (np.getChuYs().size() > 0) {
+           text += TextFormat.textSUnderline("<br/>Chú ý:<br/>");
+           for (int k = 0; k < np.getChuYs().size(); k++) {
+               text += "<br/>" + TextFormat.textSColorDefault(np.getChuYs().get(k)) + "<br/>";
+           }
+       }
+        if (np.getViDus().size() > 0) {
+            text += TextFormat.textSUnderline("<br/>Ví dụ:<br/>");
+            for (int k = 0; k < np.getViDus().size(); k++) {
+                text += "<br/>&#8226; " + TextFormat.textSColorDefault(np.getViDus().get(k).getVietCau()) + "<br/>";
+                text += "<font color='blue'><small>( " + np.getViDus().get(k).getDichCau() + " )</small></font>" + "<br/>";
+            }
         }
-        ((TextView)vh.getItem(3)).setText(TextFormat.textColorDefault(text));
-        text = "EX:\n\n";
-        for (int k = 0; k < np.getViDus().size(); k++) {
-            text += np.getViDus().get(k).getVietCau() + "<br/>";
-            text += "<font color='blue'>( " + np.getViDus().get(k).getDichCau() + " )</font>" + "<br/>";
-        }
-        ((TextView)vh.getItem(4)).setText(TextFormat.textColorDefault(text));
+        ((TextView)vh.getItem(0)).setText(Html.fromHtml(text));
     }
 
     @Override

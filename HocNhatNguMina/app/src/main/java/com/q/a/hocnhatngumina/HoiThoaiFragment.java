@@ -1,6 +1,7 @@
 package com.q.a.hocnhatngumina;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -8,9 +9,11 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.adapters.HoiThoaiAdapter;
 import com.q.a.hocnhatngumina.utils.Constants;
@@ -39,8 +42,16 @@ public class HoiThoaiFragment extends Fragment {
         mListView = (ListView)rootView.findViewById(R.id.listView);
         hoiThoaiAdapter = new HoiThoaiAdapter(getContext(), baiHocSo);
         final View header = LayoutInflater.from(getContext()).inflate(R.layout.media_item, null);
-        ImageButton play = (ImageButton)header.findViewById(R.id.bt_setting);
+        ImageButton play = (ImageButton)header.findViewById(R.id.bt_play);
         play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "AS", Toast.LENGTH_SHORT).show();
+                getActivity().startService(new Intent(getActivity(), PlayMediaService.class));
+            }
+        });
+        ImageButton setting = (ImageButton)header.findViewById(R.id.bt_setting);
+        setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -68,9 +79,13 @@ public class HoiThoaiFragment extends Fragment {
                     }
                 });
 
+                alertDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_tranparent);
+
+
                 alertDialog.show();
             }
         });
+
         mListView.addHeaderView(header);
         mListView.setAdapter(hoiThoaiAdapter);
         return rootView;

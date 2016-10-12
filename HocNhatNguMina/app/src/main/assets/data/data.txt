@@ -173,7 +173,7 @@
 				{
 					"tieu_de":"1. N1 は N2 です",
 					"y_nghia":[
-						{"yn":"N1 là N2"}
+						{"yn":"- N1 là N2"}
 					],
 					"cach_dung":[
 						{"cd":"- Danh từ đứng trước は là chủ đề hoặc chủ ngữ trong câu."},
