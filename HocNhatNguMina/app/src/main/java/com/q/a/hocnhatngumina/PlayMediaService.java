@@ -41,6 +41,7 @@ public class PlayMediaService extends IntentService {
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.mipmap.ic_launcher);
         final RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.item_play_media);
+        remoteViews.setOnClickFillInIntent(R.id.bt_play, new Intent(getApplicationContext(), PlayClickReceiver.class));
         mBuilder.setContent(remoteViews);
         Notification  notification = mBuilder.build();
         notification.flags = Notification.FLAG_NO_CLEAR;
