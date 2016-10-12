@@ -1,9 +1,14 @@
 package com.q.a.hocnhatngumina;
 
 
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -26,11 +31,40 @@ public class HoiThoaiFragment extends Fragment {
 
     private ListView mListView;
     private HoiThoaiAdapter hoiThoaiAdapter;
+    private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+//            Toast.makeText(context, "Nhan su kien", Toast.LENGTH_SHORT).show();
+            if (intent.getAction().equals(Constants.ACTION_INTENT_MEDIA_PLAY)) {
+                Toast.makeText(context, "Nhan su kien play", Toast.LENGTH_SHORT).show();
+            }
+            if (intent.getAction().equals(Constants.ACTION_INTENT_MEDIA_PAUSE)) {
+                Toast.makeText(context, "Nhan su kien páue", Toast.LENGTH_SHORT).show();
+            }
+            if (intent.getAction().equals(Constants.ACTION_INTENT_MEDIA_STOP)) {
+//                Toast.makeText(context, "Nhan su kien stop", Toast.LENGTH_SHORT).show();
+                context.stopService(new Intent(context, PlayMediaService.class));
+                NotificationManager notificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.cancel(PlayMediaService.NOTIFICATTON_ID);
+            }
+        }
+    };
+
+    private IntentFilter mIntentFilter;
 
     public HoiThoaiFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mIntentFilter = new IntentFilter();
+        mIntentFilter.addAction(Constants.ACTION_INTENT_MEDIA_PLAY);
+        mIntentFilter.addAction(Constants.ACTION_INTENT_MEDIA_PAUSE);
+        mIntentFilter.addAction(Constants.ACTION_INTENT_MEDIA_STOP);
+        getContext().registerReceiver(mBroadcastReceiver, mIntentFilter);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
@@ -46,8 +80,9 @@ public class HoiThoaiFragment extends Fragment {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "AS", Toast.LENGTH_SHORT).show();
-                getActivity().startService(new Intent(getActivity(), PlayMediaService.class));
+                Intent intent = new Intent(getActivity(), PlayMediaService.class);
+                intent.putExtra(Constants.URL_FILE_MEDIA, "null");
+                getActivity().startService(intent);
             }
         });
         ImageButton setting = (ImageButton)header.findViewById(R.id.bt_setting);
@@ -91,4 +126,18 @@ public class HoiThoaiFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
 }

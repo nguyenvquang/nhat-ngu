@@ -212,12 +212,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
                         tv.getViDus().add(vd);
                     }
                     mDataSource.add(tv);
-                    ((Activity)mContext).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            notifyDataSetChanged();
-                        }
-                    });
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();

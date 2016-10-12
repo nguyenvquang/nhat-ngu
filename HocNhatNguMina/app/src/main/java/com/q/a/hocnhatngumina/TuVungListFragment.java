@@ -88,12 +88,12 @@ public class TuVungListFragment extends Fragment implements MediaPlayer.OnComple
         ((BaiHocMinaActivity)getActivity()).changeTitle(getContext().getResources().getString(R.string.bai_hoc_so) + " " + mBaiHocSo);
         ListView lv = (ListView)rootView.findViewById(R.id.list_view);
         ((BaiHocMinaActivity)getActivity()).showMenu(true);
-        final View headerView = LayoutInflater.from(getContext()).inflate(R.layout.media_item, null);
+        View headerView = LayoutInflater.from(getContext()).inflate(R.layout.media_item, null);
         mPauseButton = (ImageButton)headerView.findViewById(R.id.bt_pause);
         mPlayButton = (ImageButton)headerView.findViewById(R.id.bt_play);
         setupListener();
         lv.addHeaderView(headerView);
-        lv.setAdapter(new TuVungAdapter(getContext(), mBaiHocSo, mListViewOnItemClickListener));
+        lv.setAdapter(new TuVungAdapter(getContext(), mBaiHocSo));
         mListView = lv;
         return rootView;
     }
@@ -194,6 +194,8 @@ public class TuVungListFragment extends Fragment implements MediaPlayer.OnComple
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+
+        mListView = null;
 
     }
 }

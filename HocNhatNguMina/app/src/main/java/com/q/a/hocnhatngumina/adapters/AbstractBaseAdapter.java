@@ -112,6 +112,7 @@ public abstract class AbstractBaseAdapter extends BaseAdapter  {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 updateUI();
+                notifyDataSetChanged();
                 if (pd != null && pd.isShowing()) pd.cancel();
             }
         }.execute();

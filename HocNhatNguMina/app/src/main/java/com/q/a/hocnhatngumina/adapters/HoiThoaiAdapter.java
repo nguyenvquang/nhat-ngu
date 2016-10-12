@@ -105,12 +105,7 @@ public class HoiThoaiAdapter extends AbstractBaseAdapter {
                         ht.getNoiDungs().add(vd);
                     }
                     mDataSource.add(ht);
-                    ((Activity)mContext).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            notifyDataSetChanged();
-                        }
-                    });
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();

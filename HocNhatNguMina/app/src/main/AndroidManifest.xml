@@ -62,12 +62,17 @@
         <activity android:name=".KanjiActivity" />
 
         <service android:name=".PlayMediaService" />
-        <service
-            android:name=".PlayService"
-            android:exported="false" />
 
         <receiver
-            android:name=".PlayClickReceiver"
+            android:name=".service.MediaPowerReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".service.MediaPauseReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".service.MediaPlayReceiver"
             android:enabled="true"
             android:exported="false"></receiver>
     </application>

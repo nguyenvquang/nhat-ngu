@@ -54,20 +54,7 @@ public class DanhSachBaiHocAdapter extends AbstractBaseAdapter {
             public void onClick(View v) {
                 if (mListViewOnItemClickListener != null) {
                            mListViewOnItemClickListener.onItemClick(position, v);
-//                    final TuVungListFragment tuVungListFragment  = new TuVungListFragment();
-//                    SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mContext);
-//                    SharedPreferences.Editor editor = sp.edit();
-//                    editor.putInt(Constants.BAI_HOC_SO, position + 1);
-//                    editor.commit();
-//                    ((Activity)mContext).runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            notifyDataSetChanged();
-//                            ((AppCompatActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.container_fragment, tuVungListFragment).commit();
-//
-//                        }
-//                    });
-
+                    Log.i("ll", "o " + position);
                 }
             }
         });
@@ -79,19 +66,10 @@ public class DanhSachBaiHocAdapter extends AbstractBaseAdapter {
 //        mDataSource = DbQuery.getLessionList(mContext);
             DbHelper dbb = new DbHelper(mContext);
             mCursor = dbb.open().query(BaiHocTb.TABLE_NAME, BaiHocTb.getColumns(), null, null, null, null, null);
-
-//            ((Activity)mContext).runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    notifyDataSetChanged();
-//                }
-//            });
-//
     }
 
     @Override
     public void updateUI() {
         super.updateUI();
-        notifyDataSetChanged();
     }
 }
