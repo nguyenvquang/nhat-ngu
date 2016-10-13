@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,8 @@ import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.adapters.HoiThoaiAdapter;
 import com.q.a.hocnhatngumina.utils.Constants;
+
+import java.io.File;
 
 
 /**
@@ -81,7 +84,9 @@ public class HoiThoaiFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), PlayMediaService.class);
-                intent.putExtra(Constants.URL_FILE_MEDIA, "null");
+                File sdFile = Environment.getExternalStorageDirectory();
+                File musicFile = new File(sdFile.getAbsolutePath() + "/Download/sound.ogg");
+                intent.putExtra(Constants.URL_FILE_MEDIA, musicFile.getPath());
                 getActivity().startService(intent);
             }
         });

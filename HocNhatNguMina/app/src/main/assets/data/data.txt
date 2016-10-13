@@ -344,11 +344,15 @@
 						{
 							"cau":[
 								{"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
-								{"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""},
-								{"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
-								{"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+								{"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
 							]
-						}
+						},
+						{
+                        							"cau":[
+                        								{"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                        								{"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                        							]
+                        						}
 					]
 				},
 				{
@@ -356,32 +360,32 @@
 					"noi_dung":[
 						{
 							"cau":[
-								{"viet_cau":"[あなたは]　マイク・ミラーさんですか。", "dich_cau":""},
-								{"viet_cau":"…はい、[わたしは]　マイク・ミラーです。", "dich_cau":""}
+								{"viet_cau":"[あなたは]　マイク・ミラーさんですか。", "dich_cau":"xzcx"},
+								{"viet_cau":"…はい、[わたしは]　マイク・ミラーです。", "dich_cau":"xzczx"}
 							]
 						},
 						{
 							"cau":[
-								{"viet_cau":" ミラーさんは　学生ですか。", "dich_cau":""},
-								{"viet_cau":"…いいえ、[わたしは]　学生じゃ　ありません。会社員です。", "dich_cau":""}
+								{"viet_cau":" ミラーさんは　学生ですか。", "dich_cau":"xzczx"},
+								{"viet_cau":"…いいえ、[わたしは]　学生じゃ　ありません。会社員です。", "dich_cau":"zxczx"}
 							]
 						},
 						{
 							"cau":[
-								{"viet_cau":"ワンさんは　エンジニアですか。", "dich_cau":""},
-								{"viet_cau":"…いいえ、ワンさんは　エンジニアじゃ　ありません。医者です。", "dich_cau":""}
+								{"viet_cau":"ワンさんは　エンジニアですか。", "dich_cau":"zxczx"},
+								{"viet_cau":"…いいえ、ワンさんは　エンジニアじゃ　ありません。医者です。", "dich_cau":"zxczx"}
 							]
 						},
 						{
 							"cau":[
-								{"viet_cau":"あの方は　どなたですか。", "dich_cau":""},
-								{"viet_cau":"…ワットさんです。さくら大学の　先生です。", "dich_cau":""}
+								{"viet_cau":"あの方は　どなたですか。", "dich_cau":"zxcxz"},
+								{"viet_cau":"…ワットさんです。さくら大学の　先生です。", "dich_cau":"zxczx"}
 							]
 						},
 						{
 							"cau":[
-								{"viet_cau":"テレサちゃんは　何歳ですか。", "dich_cau":""},
-								{"viet_cau":"…９歳です。", "dich_cau":""}
+								{"viet_cau":"テレサちゃんは　何歳ですか。", "dich_cau":"zxcxz"},
+								{"viet_cau":"…９歳です。", "dich_cau":"zxcz"}
 							]
 						}
 

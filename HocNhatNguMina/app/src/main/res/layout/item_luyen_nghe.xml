@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/bt_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_setting"
+                />
+
+            <ImageButton
+                android:id="@+id/bt_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_alignBaseline="@+id/bt_setting"
+                android:layout_toLeftOf="@+id/bt_setting"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_play"
+                />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bt_play"
+                android:layout_alignBaseline="@+id/bt_play"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/seekBar"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceListItemSmall"
+                android:layout_below="@+id/seekBar"
+                android:text="00:00"
+                android:layout_toLeftOf="@+id/tv_time_length"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:padding="8dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tv_status"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceListItemSmall"
+                android:layout_below="@+id/seekBar"
+                android:layout_toLeftOf="@+id/bt_play"
+                android:text="00:00"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:padding="8dp"
+                android:id="@+id/tv_time_length"
+                />
+
+            <TextView
+                android:layout_below="@+id/tv_status"
+                android:id="@+id/tvNoiDung"
+                android:text="A"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/llContentDynamic"
+                android:layout_below="@+id/tvNoiDung"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

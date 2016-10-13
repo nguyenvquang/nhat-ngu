@@ -25,6 +25,8 @@ import com.q.a.hocnhatngumina.service.MediaPlayReceiver;
 import com.q.a.hocnhatngumina.service.MediaPowerReceiver;
 import com.q.a.hocnhatngumina.utils.Constants;
 
+import java.io.IOException;
+
 /**
  * Created by Quang on 10/11/2016.
  */
@@ -43,18 +45,29 @@ public class PlayMediaService extends IntentService implements MediaPlayer.OnCom
     public void onCreate() {
         super.onCreate();
 //        Toast.makeText(getApplicationContext(), "Service start", Toast.LENGTH_SHORT).show();
-        mMediaPlayer = new MediaPlayer();
-        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-        mMediaPlayer.setOnErrorListener(this);
-        mMediaPlayer.setOnPreparedListener(this);
-        mMediaPlayer.setOnCompletionListener(this);
-        mMediaPlayer.setOnBufferingUpdateListener(this);
+//        mMediaPlayer = new MediaPlayer();
+//        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+//        mMediaPlayer.setOnErrorListener(this);
+//        mMediaPlayer.setOnPreparedListener(this);
+//        mMediaPlayer.setOnCompletionListener(this);
+//        mMediaPlayer.setOnBufferingUpdateListener(this);
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
 
         mURL = intent.getExtras().getString(Constants.URL_FILE_MEDIA);
+
+        mMediaPlayer = new MediaPlayer();
+        try {
+            mMediaPlayer.setDataSource(mURL);
+            mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            mMediaPlayer.setLooping(true);
+            mMediaPlayer.prepare();
+            mMediaPlayer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
