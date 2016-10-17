@@ -1,7 +1,6 @@
 package com.q.a.hocnhatngumina;
 
 
-import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -9,19 +8,18 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.adapters.HoiThoaiAdapter;
+import com.q.a.hocnhatngumina.service.MediaService;
 import com.q.a.hocnhatngumina.utils.Constants;
 
 import java.io.File;
@@ -46,9 +44,8 @@ public class HoiThoaiFragment extends Fragment {
             }
             if (intent.getAction().equals(Constants.ACTION_INTENT_MEDIA_STOP)) {
 //                Toast.makeText(context, "Nhan su kien stop", Toast.LENGTH_SHORT).show();
-                context.stopService(new Intent(context, PlayMediaService.class));
-                NotificationManager notificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
-                notificationManager.cancel(PlayMediaService.NOTIFICATTON_ID);
+                Intent svIntent1 = new Intent(context, MediaService.class);
+                context.stopService(svIntent1);
             }
         }
     };
@@ -83,11 +80,12 @@ public class HoiThoaiFragment extends Fragment {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PlayMediaService.class);
+                Intent intent = new Intent(getActivity(), MediaService.class);
                 File sdFile = Environment.getExternalStorageDirectory();
-                File musicFile = new File(sdFile.getAbsolutePath() + "/Download/sound.ogg");
+                File musicFile = new File(sdFile.getAbsolutePath() + "/Hoc nhat ngu Mina/audio/kotoba/a");
                 intent.putExtra(Constants.URL_FILE_MEDIA, musicFile.getPath());
                 getActivity().startService(intent);
+
             }
         });
         ImageButton setting = (ImageButton)header.findViewById(R.id.bt_setting);
@@ -114,8 +112,7 @@ public class HoiThoaiFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         alertDialog.cancel();
-                        hoiThoaiAdapter.setmShowMean();
-                        hoiThoaiAdapter.notifyDataSetChanged();
+                        getActivity().stopService(new Intent(getContext(), MediaService.class));
                     }
                 });
 

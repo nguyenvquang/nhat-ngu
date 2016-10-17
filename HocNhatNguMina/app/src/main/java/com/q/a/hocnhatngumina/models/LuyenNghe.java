@@ -9,8 +9,15 @@ import java.util.List;
 public class LuyenNghe {
     private String audio;
     private List<List<ViDu>> noiDungs = new ArrayList<>();
+    private List<Boolean> hienThiCauTraLoi = new ArrayList<>();
+
+
+    public List<Boolean> getHienThiCauTraLoi() {
+        return hienThiCauTraLoi;
+    }
 
     public LuyenNghe() {
+
     }
 
     public String getAudio() {
@@ -28,4 +35,6 @@ public class LuyenNghe {
     public void setNoiDungs(List<List<ViDu>> noiDungs) {
         this.noiDungs = noiDungs;
     }
+
+
 }

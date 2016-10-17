@@ -1,9 +1,7 @@
 package com.q.a.hocnhatngumina;
 
 
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -12,9 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.adapters.AbstractBaseAdapter;
 import com.q.a.hocnhatngumina.adapters.DanhSachBaiHocAdapter;
@@ -96,7 +92,6 @@ public class DanhSachBaiHocFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Toast.makeText(getContext(), "Destroy", Toast.LENGTH_SHORT).show();
         mListView = null;
     }
 

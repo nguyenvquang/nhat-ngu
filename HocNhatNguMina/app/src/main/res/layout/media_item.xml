@@ -7,7 +7,7 @@
         android:id="@+id/bt_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bt_setting"
+        android:src="@drawable/bt_menu_dot_36dp"
         android:padding="16dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"

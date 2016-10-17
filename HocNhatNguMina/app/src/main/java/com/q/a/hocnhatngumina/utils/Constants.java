@@ -15,6 +15,7 @@ public class Constants {
     public static final String ACTION_INTENT_MEDIA_PAUSE = "ACTION_INTENT_MEDIA_PAUSE";
     public static final String ACTION_INTENT_MEDIA_STOP = "ACTION_INTENT_MEDIA_STOP";
     public static final String URL_FILE_MEDIA = "URL_FILE_MEDIA";
+    public static final String SERVICE_STATE = "SERVICE_STATE";
 
 
     public static final String URL_LINK_IMAGE_HIRAGANA = "https://raw.githubusercontent.com/nguyenvquang/hoctiengnhat/master/hiragana_images/";

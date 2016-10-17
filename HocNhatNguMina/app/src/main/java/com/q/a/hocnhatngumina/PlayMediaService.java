@@ -4,21 +4,12 @@ import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.Handler;
-import android.os.IBinder;
-import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageButton;
+import android.util.Log;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.service.MediaPauseReceiver;
 import com.q.a.hocnhatngumina.service.MediaPlayReceiver;
@@ -30,7 +21,9 @@ import java.io.IOException;
 /**
  * Created by Quang on 10/11/2016.
  */
-public class PlayMediaService extends IntentService implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener, MediaPlayer.OnPreparedListener, MediaPlayer.OnBufferingUpdateListener {
+public class PlayMediaService extends IntentService
+        implements MediaPlayer.OnSeekCompleteListener, MediaPlayer.OnErrorListener,
+        MediaPlayer.OnPreparedListener, MediaPlayer.OnBufferingUpdateListener {
 
     public PlayMediaService() {
         super("PlayMediaService");
@@ -39,32 +32,34 @@ public class PlayMediaService extends IntentService implements MediaPlayer.OnCom
     public static final  int NOTIFICATTON_ID = 100001;
 
     private String mURL = "";
-    private MediaPlayer mMediaPlayer;
+    private MediaPlayer mPlayer;
 
     @Override
     public void onCreate() {
         super.onCreate();
-//        Toast.makeText(getApplicationContext(), "Service start", Toast.LENGTH_SHORT).show();
-//        mMediaPlayer = new MediaPlayer();
-//        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-//        mMediaPlayer.setOnErrorListener(this);
-//        mMediaPlayer.setOnPreparedListener(this);
-//        mMediaPlayer.setOnCompletionListener(this);
-//        mMediaPlayer.setOnBufferingUpdateListener(this);
+//
+        mPlayer = new MediaPlayer();
+        mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        mPlayer.setOnSeekCompleteListener(this);
+        mPlayer.setOnPreparedListener(this);
+        mPlayer.setOnErrorListener(this);
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
 
         mURL = intent.getExtras().getString(Constants.URL_FILE_MEDIA);
+        String state = intent.getExtras().getString(Constants.SERVICE_STATE);
+        Log.i("state", state);
+        if (state.equals("stop")) {
+            if (mPlayer.isPlaying()) mPlayer.stop();
+            if (mPlayer != null) mPlayer.release();
+            return;
+        }
 
-        mMediaPlayer = new MediaPlayer();
         try {
-            mMediaPlayer.setDataSource(mURL);
-            mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            mMediaPlayer.setLooping(true);
-            mMediaPlayer.prepare();
-            mMediaPlayer.start();
+            mPlayer.setDataSource(mURL);
+            mPlayer.prepareAsync();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -85,38 +80,42 @@ public class PlayMediaService extends IntentService implements MediaPlayer.OnCom
         Notification  notification = mBuilder.build();
         notification.flags = Notification.FLAG_NO_CLEAR;
         notification.defaults |= Notification.DEFAULT_LIGHTS; // LED
-        notification.defaults |= Notification.DEFAULT_VIBRATE; //Vibration
-        notification.defaults |= Notification.DEFAULT_SOUND; // Sound
+//        notification.defaults |= Notification.DEFAULT_VIBRATE; //Vibration
+//        notification.defaults |= Notification.DEFAULT_SOUND; // Sound
         NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(NOTIFICATTON_ID, notification);
 
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mMediaPlayer != null) {
-            mMediaPlayer.release();
-        }
-    }
+
 
     @Override
     public void onBufferingUpdate(MediaPlayer mp, int percent) {
 
     }
 
-    @Override
-    public void onCompletion(MediaPlayer mp) {
-
-    }
 
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
+        mp.release();
         return false;
     }
 
     @Override
     public void onPrepared(MediaPlayer mp) {
 
+        mp.start();
+    }
+
+    @Override
+    public void onSeekComplete(MediaPlayer mediaPlayer) {
+        mediaPlayer.stop();
+    }
+
+
+    @Override
+    public void onDestroy() {
+//        Toast.makeText(getApplicationContext(), "Service destroy", Toast.LENGTH_SHORT).show();
+        super.onDestroy();
     }
 }

@@ -28,7 +28,6 @@ import com.q.a.hocnhatngumina.utils.DownloadFile;
 import com.q.a.hocnhatngumina.utils.FileMn;
 
 import java.io.IOException;
-import java.util.Locale;
 
 
 /**
@@ -69,14 +68,6 @@ public class TuVungListFragment extends Fragment implements MediaPlayer.OnComple
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         mMediaPlayer.reset();
         mHandler = new Handler();
-        textToSpeech = new TextToSpeech(getActivity(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    textToSpeech.setLanguage(Locale.JAPANESE);
-                }
-            }
-        });
 
     }
 

@@ -348,11 +348,11 @@
 							]
 						},
 						{
-                        							"cau":[
-                        								{"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
-                        								{"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
-                        							]
-                        						}
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
 					]
 				},
 				{
@@ -390,7 +390,93 @@
 						}
 
 					]
-				}
+				},
+                {
+                    "audio":"bunkei1",
+                    "noi_dung":[
+                        {
+                            "cau":[
+                                {"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
+                                {"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
+                            ]
+                        },
+                        {
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "audio":"bunkei1",
+                    "noi_dung":[
+                        {
+                            "cau":[
+                                {"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
+                                {"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
+                            ]
+                        },
+                        {
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "audio":"bunkei1",
+                    "noi_dung":[
+                        {
+                            "cau":[
+                                {"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
+                                {"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
+                            ]
+                        },
+                        {
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
+                    ]
+                },
+                 {
+                    "audio":"bunkei1",
+                    "noi_dung":[
+                        {
+                            "cau":[
+                                {"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
+                                {"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
+                            ]
+                        },
+                        {
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
+                    ]
+                },
+                 {
+                    "audio":"bunkei1",
+                    "noi_dung":[
+                        {
+                            "cau":[
+                                {"viet_cau":"わたしは　マイク・ミラーです。", "dich_cau":""},
+                                {"viet_cau":"サントスさんは　学生じゃありません。", "dich_cau":""}
+                            ]
+                        },
+                        {
+                            "cau":[
+                                {"viet_cau":"ミラーさんは　会社員ですか。", "dich_cau":""},
+                                {"viet_cau":"サントスさんも　会社員です。", "dich_cau":""}
+                            ]
+                        }
+                    ]
+                }
+
 			],
 			"bai_tap":[
 			],

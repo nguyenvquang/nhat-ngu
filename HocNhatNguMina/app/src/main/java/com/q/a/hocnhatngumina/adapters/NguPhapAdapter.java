@@ -1,19 +1,14 @@
 package com.q.a.hocnhatngumina.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
-import android.view.View;
 import android.widget.TextView;
 
 import com.q.a.hocnhatngumina.R;
 import com.q.a.hocnhatngumina.models.NguPhap;
-import com.q.a.hocnhatngumina.models.ViDu;
 import com.q.a.hocnhatngumina.utils.DanhSachBaiHoc;
+import com.q.a.hocnhatngumina.utils.JsonParser;
 import com.q.a.hocnhatngumina.utils.TextFormat;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -104,45 +99,7 @@ public class NguPhapAdapter extends AbstractBaseAdapter {
                     buffer = new char[4096];
                 }
                 inputStreamReader.close();
-                JSONObject rootJsonObject = new JSONObject(data);
-                JSONObject noiDung = rootJsonObject.getJSONObject("noi_dung");
-                JSONArray nguPhaps = noiDung.getJSONArray("ngu_phap");
-                for (int i = 0; i < nguPhaps.length(); i++) {
-                    JSONObject oi = nguPhaps.getJSONObject(i);
-                    NguPhap np = new NguPhap();
-                    np.setTieuDe(oi.getString("tieu_de"));
-                    JSONArray yNghias = oi.getJSONArray("y_nghia");
-                    for (int k = 0; k < yNghias.length(); k++) {
-                        JSONObject ok = yNghias.getJSONObject(k);
-                        np.getyNghias().add(ok.getString("yn"));
-                    }
-                    JSONArray cachDungs = oi.getJSONArray("cach_dung");
-                    for (int k = 0; k < cachDungs.length(); k++) {
-                        JSONObject ok = cachDungs.getJSONObject(k);
-                        np.getCachDungs().add(ok.getString("cd"));
-                    }
-                    JSONArray chuYs = oi.getJSONArray("chu_y");
-                    for (int k = 0; k < chuYs.length(); k++) {
-                        JSONObject ok = chuYs.getJSONObject(k);
-                        np.getChuYs().add(ok.getString("cy"));
-                    }
-                    JSONArray viDus = oi.getJSONArray("vi_du");
-                    for (int k = 0; k < viDus.length(); k++) {
-                        JSONObject ok = viDus.getJSONObject(k);
-                        ViDu vd = new ViDu();
-                        vd.setVietCau(ok.getString("viet_cau"));
-                        vd.setDichCau(ok.getString("dich_cau"));
-                        np.getViDus().add(vd);
-                    }
-
-                    mDataSource.add(np);
-                    ((Activity)mContext).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            notifyDataSetChanged();
-                        }
-                    });
-                }
+                mDataSource = JsonParser.getNguPhapList(data);
             } catch (Exception e) {
                 e.printStackTrace();
             }

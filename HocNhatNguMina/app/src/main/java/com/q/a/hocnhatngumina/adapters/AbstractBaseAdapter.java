@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Nguyen Van Quang on 8/4/2016.
@@ -22,7 +23,7 @@ public abstract class AbstractBaseAdapter extends BaseAdapter  {
     protected boolean isShowLoading = false;
     protected Cursor mCursor = null;
     protected int mAdapterSize = 0;
-    protected ArrayList mDataSource = new ArrayList();
+    protected List mDataSource = new ArrayList();
 
     public AbstractBaseAdapter(Context mContext) {
         this.mContext = mContext;
@@ -73,21 +74,16 @@ public abstract class AbstractBaseAdapter extends BaseAdapter  {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        try {
             ChildViewHoler vh = null;
-            if (convertView == null) {
+//            if (convertView == null) {
                 convertView = LayoutInflater.from(mContext).inflate(mLayoutItemId, null);
                 vh = new ChildViewHoler(convertView, mColumIds);
                 convertView.setTag(vh);
-            } else {
-                vh = (ChildViewHoler)convertView.getTag();
-            }
+//            }
+//            else {
+//                vh = (ChildViewHoler)convertView.getTag();
+//            }
             changeDataViewHoler(vh, position);
-        } catch (Exception e) {
-            while (true) {
-                e.printStackTrace();
-            }
-        }
         return convertView;
     }
 

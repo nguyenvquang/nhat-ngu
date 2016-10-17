@@ -33,4 +33,12 @@ public class ViDu implements Serializable {
     public void setDichCau(String dichCau) {
         this.dichCau = dichCau;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "vietCau='" + vietCau + '\'' +
+                ", dichCau='" + dichCau + '\'' +
+                '}';
+    }
 }

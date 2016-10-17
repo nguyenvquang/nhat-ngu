@@ -1,13 +1,9 @@
 package com.q.a.hocnhatngumina.service;
 
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.q.a.hocnhatngumina.utils.Constants;
 
 public class MediaPowerReceiver extends BroadcastReceiver {
     public MediaPowerReceiver() {
@@ -19,7 +15,9 @@ public class MediaPowerReceiver extends BroadcastReceiver {
         // an Intent broadcast.
 //        Toast.makeText(context, "Power", Toast.LENGTH_SHORT).show();
         Intent statusIntent = new Intent();
-        statusIntent.setAction(Constants.ACTION_INTENT_MEDIA_STOP);
-        context.sendBroadcast(statusIntent);
+        Intent svIntent1 = new Intent(context, MediaService.class);
+        context.stopService(svIntent1);
+        NotificationManager notificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancel(MediaService.NOTIFICATTON_ID);
     }
 }

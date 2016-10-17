@@ -12,24 +12,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageButton
-                android:id="@+id/bt_setting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
-                android:src="@drawable/bt_setting"
-                />
 
             <ImageButton
                 android:id="@+id/bt_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:layout_alignBaseline="@+id/bt_setting"
-                android:layout_toLeftOf="@+id/bt_setting"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:background="@android:color/transparent"
                 android:src="@drawable/bt_play"

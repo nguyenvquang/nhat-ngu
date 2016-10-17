@@ -1,15 +1,17 @@
 package com.q.a.hocnhatngumina.adapters;
 
-import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
 
 import com.q.a.hocnhatngumina.R;
+import com.q.a.hocnhatngumina.database.AppDb;
 import com.q.a.hocnhatngumina.models.TuVung;
-import com.q.a.hocnhatngumina.models.ViDu;
 import com.q.a.hocnhatngumina.utils.DanhSachBaiHoc;
+import com.q.a.hocnhatngumina.utils.JsonParser;
 import com.q.a.hocnhatngumina.utils.TextFormat;
 
 import org.json.JSONArray;
@@ -25,7 +27,6 @@ import java.util.Locale;
 public class TuVungAdapter extends AbstractBaseAdapter {
 
     private int mLession;
-    private int mClickPosition = -1;
     private TextToSpeech mTextToSpeech;
 
     public TuVungAdapter(Context mContext, int mLession) {
@@ -37,7 +38,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
         this.mLession = mLession;
         mTextToSpeech = new TextToSpeech(mContext, new TextToSpeech.OnInitListener() {
             @Override
-            public void onInit(int status) {
+            public void onInit(int i) {
                 mTextToSpeech.setLanguage(Locale.JAPANESE);
             }
         });
@@ -52,7 +53,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
         this.mLession = mLession;
         mTextToSpeech = new TextToSpeech(mContext, new TextToSpeech.OnInitListener() {
             @Override
-            public void onInit(int status) {
+            public void onInit(int i) {
                 mTextToSpeech.setLanguage(Locale.JAPANESE);
             }
         });
@@ -147,13 +148,16 @@ public class TuVungAdapter extends AbstractBaseAdapter {
         }
 
         final TuVung finalTv = tv;
-        (vh.getItem(4)).setOnClickListener(new View.OnClickListener() {
+        (vh.getItem(9)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mListViewOnItemClickListener != null) {
-//                    mListViewOnItemClickListener.onItemClick(position, vh.parentView);
-                    mTextToSpeech.speak(finalTv.getKanji(), TextToSpeech.QUEUE_FLUSH, null);
+
                 }
+                String text = finalTv.getKanji();
+                if (finalTv.getKanji().length() == 0) text = finalTv.getHiragana();
+                if (finalTv.getHiragana().length() == 0) text = finalTv.getKatakana();
+                mTextToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null);
             }
         });
 
@@ -161,14 +165,6 @@ public class TuVungAdapter extends AbstractBaseAdapter {
 
     @Override
     public void loadData() {
-//        DbHelper db = new DbHelper(mContext);
-//        mCursor = db.open().rawQuery("select * from " + TbTuVung.TABLE_NAME, null);
-//        ((Activity)mContext).runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                notifyDataSetChanged();
-//            }
-//        });
         read(mLession);
     }
 
@@ -176,46 +172,41 @@ public class TuVungAdapter extends AbstractBaseAdapter {
         String name = DanhSachBaiHoc.layTenBaiHoc(baiHocSo);
         if (name != null) {
             try {
-                InputStream inputStream = mContext.getAssets().open("data/data.txt");
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                int length = 0;
-                char[] buffer = new char[4096];
                 String data = "";
-                while ((length = inputStreamReader.read(buffer)) > -1) {
-                    String cp = String.copyValueOf(buffer, 0, length);
-                    data += cp;
-                    buffer = new char[4096];
-                }
-                inputStreamReader.close();
-                JSONObject root = new JSONObject(data);
-                JSONObject noiDung = root.getJSONObject("noi_dung");
-                JSONArray tuVungs = noiDung.getJSONArray("tu_vung");
-                for (int i = 0; i < tuVungs.length(); i++) {
-                    JSONObject oi = tuVungs.getJSONObject(i);
-                    TuVung tv = new TuVung();
-                    tv.setCode(mLession);
-                    tv.setId(i);
-                    tv.setKanji(oi.getString("kanji").length() == 0 ? "null" : oi.getString("kanji"));
-                    tv.setHiragana(oi.getString("hiragana").length() == 0 ? "null":oi.getString("hiragana") );
-                    tv.setKatakana(oi.getString("katakana").length() == 0 ? "null" : oi.getString("katakana"));
-                    tv.setMeanVI(oi.getString("giai_thich").length() == 0 ? "null" : oi.getString("giai_thich"));
-                    tv.setAudioName(oi.getString("audio"));
-                    tv.setRomaji("null");
-                    tv.setTenBoKanji(oi.getString("bo_kanji"));
-                    tv.setBoKanji(oi.getString("bo_kanji"));
-                    JSONArray viDus = oi.getJSONArray("vi_du");
-                    for (int k = 0; k < viDus.length(); k++) {
-                        JSONObject ok = viDus.getJSONObject(k);
-                        ViDu vd = new ViDu();
-                        vd.setVietCau(ok.getString("viet_cau"));
-                        vd.setDichCau(ok.getString("dich_cau"));
-                        tv.getViDus().add(vd);
+                AppDb appDb = new AppDb(mContext);
+                Cursor cursor = appDb.queryTbBaiHoc(mLession);
+                if (cursor == null || (cursor != null && cursor.moveToFirst() && cursor.getString(AppDb.COL_TU_VUNG) == null)) {
+                    InputStream inputStream = mContext.getAssets().open("data/data.txt");
+                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                    int length = 0;
+                    char[] buffer = new char[4096];
+                    while ((length = inputStreamReader.read(buffer)) > -1) {
+                        String cp = String.copyValueOf(buffer, 0, length);
+                        data += cp;
+                        buffer = new char[4096];
                     }
-                    mDataSource.add(tv);
+                    inputStreamReader.close();
+                    JSONObject jsonObject = new JSONObject(data);
+                    JSONObject noiDung = jsonObject.getJSONObject("noi_dung");
+                    JSONArray tuVungs = noiDung.getJSONArray("tu_vung");
 
+                    ContentValues values = new ContentValues();
+                    values.put("tu_vung", tuVungs.toString());
+                    values.put("bai_hoc", mLession);
+                    appDb.getWritableDatabase().insert(AppDb.TB_BAI_HOC, null, values);
+                    cursor = appDb.queryTbBaiHoc(mLession);
                 }
+
+                if (cursor != null && cursor.moveToFirst()) {
+                    do {
+                        data = cursor.getString(AppDb.COL_TU_VUNG);
+
+                    } while (cursor.moveToNext());
+                }
+                mDataSource = JsonParser.getTuVungList(data);
+
             } catch (Exception e) {
-                e.printStackTrace();
+             e.printStackTrace();
             }
         }
     }

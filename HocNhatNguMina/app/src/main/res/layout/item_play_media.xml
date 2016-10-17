@@ -1,58 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:gravity="center_vertical|right">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Abc"
-        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/bt_play"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/bt_play"
+            android:src="@mipmap/ic_launcher"
             />
 
-        <ImageButton
-            android:id="@+id/bt_pause"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/bt_pause"
-            />
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical">
 
-        <ImageButton
-            android:id="@+id/bt_replay"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:padding="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/bt_replay"
-            />
+            <ImageButton
+                android:id="@+id/bt_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_play"
+                />
 
-        <ImageButton
-            android:id="@+id/bt_power"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/bt_power"
-            />
+            <ImageButton
+                android:id="@+id/bt_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_pause"
+                />
+
+            <ImageButton
+                android:id="@+id/bt_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_replay"
+                />
+
+            <ImageButton
+                android:id="@+id/bt_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/bt_power"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
+
 
 </LinearLayout>

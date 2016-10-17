@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,9 +11,8 @@ import android.widget.ListView;
 
 import com.q.a.hocnhatngumina.adapters.AbstractBaseAdapter;
 import com.q.a.hocnhatngumina.adapters.MenuAdapter;
+import com.q.a.hocnhatngumina.database.AppDb;
 import com.q.a.hocnhatngumina.database.DbHelper;
-
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
 //            Window w = getWindow(); // in Activity's onCreate() for instance
 //            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 //        }
+
+        AppDb appDb = new AppDb(this);
+//        for (int i = 1; i <= 50; i++) {
+//            ContentValues contentValues = new ContentValues();
+//            contentValues.put("bai_hoc", i);
+//            appDb.getWritableDatabase().insert(AppDb.TB_BAI_HOC, null, contentValues);
+//        }
+        DbHelper  dbHelper = new DbHelper(this);
 
         ListView lv = (ListView)findViewById(R.id.lvMenu);
 
@@ -65,50 +71,18 @@ public class MainActivity extends AppCompatActivity {
         }));
 
 
-        DbHelper db = new DbHelper(this);
-//        Cursor c = db.open().rawQuery("select * from tu_vung", null);
-//        Toast.makeText(this,  "asdfasdas " + c.getColumnCount(), Toast.LENGTH_SHORT).show();
-//        if (c != null) {
-//            for (int i = 0; i < c.getColumnCount(); i++) {
-////                Toast.makeText(this, c.getColumnName(i), Toast.LENGTH_SHORT).show();
-//                Log.i("pp", c.getColumnName(i));
-//            }
-//        }
+//        Cursor c = appDb.getWritableDatabase().rawQuery("select * from " + AppDb.TB_BAI_HOC, null);
 //        if (c != null && c.moveToFirst()) {
 //            do {
-//                Toast.makeText(this, c.getInt(0) + "", Toast.LENGTH_SHORT).show();
+//                Log.i("tv", c.getInt(0) +" " + c.getString(AppDb.COL_TU_VUNG));
 //            }while (c.moveToNext());
 //        }
-        String lg = Locale.getDefault().getLanguage();
+//        String lg = Locale.getDefault().getLanguage();
 
 //        DownloadFile.start(this, link, Constants.PATH_AUDIO_ABC, link.hashCode() + ".mp3");
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuItem notifyMenuItem = menu.add(0, 1, 0, "Notification");
-//        notifyMenuItem.setIcon(R.drawable.bt_notification);
-//        notifyMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-//
-//        MenuItem shareMenuItem = menu.add(0, 2, 0, "Share");
-//        shareMenuItem.setIcon(R.drawable.bt_share);
-//        shareMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-//
-//        MenuItem rateMenuItem = menu.add(0, 3,0, "Rating");
-//        rateMenuItem.setIcon(R.drawable.bt_rating);
-//        rateMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getItemId() == 1) {
-//            mDrawerLayout.openDrawer(GravityCompat.END);
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
     public int getStatusBarHeight() {
         int result = 0;
@@ -117,11 +91,5 @@ public class MainActivity extends AppCompatActivity {
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return super.onCreateOptionsMenu(menu);
     }
 }
