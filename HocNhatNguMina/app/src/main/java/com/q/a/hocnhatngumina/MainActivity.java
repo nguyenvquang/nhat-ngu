@@ -75,11 +75,29 @@ public class MainActivity extends AppCompatActivity {
 //        if (c != null && c.moveToFirst()) {
 //            do {
 //                Log.i("tv", c.getInt(0) +" " + c.getString(AppDb.COL_TU_VUNG));
+//                Toast.makeText(this, c.getString(AppDb.COL_TU_VUNG), Toast.LENGTH_SHORT).show();
 //            }while (c.moveToNext());
 //        }
 //        String lg = Locale.getDefault().getLanguage();
 
 //        DownloadFile.start(this, link, Constants.PATH_AUDIO_ABC, link.hashCode() + ".mp3");
+
+//        try {
+//            String data = "";
+//            InputStream inputStream = getAssets().open("data/data.txt");
+//            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+//            int length = 0;
+//            char[] buffer = new char[4096];
+//            while ((length = inputStreamReader.read(buffer)) > -1) {
+//                String cp = String.copyValueOf(buffer, 0, length);
+//                data += cp;
+//                buffer = new char[4096];
+//            }
+//            inputStreamReader.close();
+//            Log.i("tv", data);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

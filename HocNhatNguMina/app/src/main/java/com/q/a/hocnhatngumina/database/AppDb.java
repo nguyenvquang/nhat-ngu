@@ -14,7 +14,7 @@ import android.util.Log;
 public class AppDb extends SQLiteOpenHelper {
 
     private static final String DB_NAME= "DB_NAME";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     private static final String CREATE_TABLE_BAI_HOC = "CREATE TABLE `tb_bai_hoc` (\n" +
             "\t`_id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +

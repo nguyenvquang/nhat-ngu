@@ -217,25 +217,25 @@ public class TuVung implements Serializable {
     @Override
     public String toString() {
         return "{" +
-                "id=" + id +
-                ", code=" + code +
-                ", lession=" + lession +
-                ", kanji='" + kanji + '\'' +
-                ", hiragana='" + hiragana + '\'' +
-                ", katakana='" + katakana + '\'' +
-                ", meanVI='" + meanVI + '\'' +
-                ", meanEN='" + meanEN + '\'' +
-                ", meanJP='" + meanJP + '\'' +
-                ", audioName='" + audioName + '\'' +
-                ", viDus=" + viDus +
-                ", ghiChu='" + ghiChu + '\'' +
-                ", audioLink='" + audioLink + '\'' +
-                ", image='" + image + '\'' +
-                ", imageLink='" + imageLink + '\'' +
-                ", boKanji='" + boKanji + '\'' +
-                ", tenBoKanji='" + tenBoKanji + '\'' +
-                ", hasExample=" + hasExample +
-                ", romaji='" + romaji + '\'' +
+                "'id'=" + id +
+                ", 'code'=" + code +
+                ", 'lession'=" + lession +
+                ", 'kanji'='" + kanji + '\'' +
+                ", 'hiragana'='" + hiragana + '\'' +
+                ", 'katakana'='" + katakana + '\'' +
+                ", 'meanVI'='" + meanVI + '\'' +
+                ", 'meanEN'='" + meanEN + '\'' +
+                ", 'meanJP'='" + meanJP + '\'' +
+                ", 'audioName'='" + audioName + '\'' +
+                ", 'viDus'=" + viDus +
+                ", 'ghiChu'='" + ghiChu + '\'' +
+                ", 'audioLink'='" + audioLink + '\'' +
+                ", 'image'='" + image + '\'' +
+                ", 'imageLink'='" + imageLink + '\'' +
+                ", 'boKanji'='" + boKanji + '\'' +
+                ", 'tenBoKanji'='" + tenBoKanji + '\'' +
+                ", 'hasExample'=" + hasExample +
+                ", 'romaji'='" + romaji + '\'' +
                 '}';
     }
 }

@@ -62,6 +62,5 @@ public class MenuAdapter extends AbstractBaseAdapter {
         mDataSource.add(new ItemMenu(R.drawable.ic_menu_van_hoa_nhat, "Văn hóa Nhật Bản"));
         mDataSource.add(new ItemMenu(R.drawable.ic_menu_jlpt, "Kỳ thi JLPT"));
         mDataSource.add(new ItemMenu(R.drawable.ic_menu_thong_bao, "Thông báo"));
-        notifyDataSetChanged();
     }
 }

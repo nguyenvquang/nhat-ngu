@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#c7adad"
     android:gravity="center_vertical|right">
 
 
@@ -29,7 +29,7 @@
                 android:id="@+id/bt_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:padding="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/bt_play"
                 />
@@ -38,25 +38,17 @@
                 android:id="@+id/bt_pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:padding="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/bt_pause"
                 />
 
-            <ImageButton
-                android:id="@+id/bt_replay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/bt_replay"
-                />
 
             <ImageButton
                 android:id="@+id/bt_power"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:padding="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/bt_power"
                 />

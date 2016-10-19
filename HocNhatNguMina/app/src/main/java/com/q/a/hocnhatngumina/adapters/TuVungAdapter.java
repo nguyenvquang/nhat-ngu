@@ -28,6 +28,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
 
     private int mLession;
     private TextToSpeech mTextToSpeech;
+    private String mString = "";
 
     public TuVungAdapter(Context mContext, int mLession) {
         this(mContext, R.layout.tu_vung_item, new Integer[]{
@@ -161,6 +162,8 @@ public class TuVungAdapter extends AbstractBaseAdapter {
             }
         });
 
+        ((TextView)vh.getItem(1)).setText(TextFormat.textColor(mString, "blue"));
+
     }
 
     @Override
@@ -175,7 +178,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
                 String data = "";
                 AppDb appDb = new AppDb(mContext);
                 Cursor cursor = appDb.queryTbBaiHoc(mLession);
-                if (cursor == null || (cursor != null && cursor.moveToFirst() && cursor.getString(AppDb.COL_TU_VUNG) == null)) {
+//                if (cursor == null || (cursor != null && cursor.moveToFirst() && cursor.getString(AppDb.COL_TU_VUNG) == null)) {
                     InputStream inputStream = mContext.getAssets().open("data/data.txt");
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                     int length = 0;
@@ -188,21 +191,21 @@ public class TuVungAdapter extends AbstractBaseAdapter {
                     inputStreamReader.close();
                     JSONObject jsonObject = new JSONObject(data);
                     JSONObject noiDung = jsonObject.getJSONObject("noi_dung");
-                    JSONArray tuVungs = noiDung.getJSONArray("tu_vung");
-
+                    JSONObject tuVungs = noiDung.getJSONObject("tu_vung");
+                    JSONArray tvs = tuVungs.getJSONArray("tvs");
                     ContentValues values = new ContentValues();
-                    values.put("tu_vung", tuVungs.toString());
+                    values.put("tu_vung", tvs.toString());
                     values.put("bai_hoc", mLession);
                     appDb.getWritableDatabase().insert(AppDb.TB_BAI_HOC, null, values);
                     cursor = appDb.queryTbBaiHoc(mLession);
-                }
+//                }
 
                 if (cursor != null && cursor.moveToFirst()) {
                     do {
                         data = cursor.getString(AppDb.COL_TU_VUNG);
-
                     } while (cursor.moveToNext());
                 }
+                mString = data;
                 mDataSource = JsonParser.getTuVungList(data);
 
             } catch (Exception e) {

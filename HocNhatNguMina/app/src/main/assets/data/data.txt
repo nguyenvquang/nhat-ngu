@@ -1,174 +1,177 @@
 {
 	"bai_hoc":"1",
 		"noi_dung":{
-			"tu_vung":[
-				{"kanji":"私", "hiragana":"わたし", "katakana":"", "giai_thich":"Tôi", "audio":"b1001", "vi_du":[
-					{"viet_cau":"",
-						"dich_cau":"Tôi là Quảng"}
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"私たち", "hiragana":"わたしたち", "katakana":"", "giai_thich":"Chúng tôi, chúng ta... (ngôi thứ 1 số nhiều)", "audio":"b1002", "vi_du":[
+			"tu_vung": {
+			        "audio": "kotoba1.mp3",
+			        "tvs": [
+			                         {"kanji":"私", "hiragana":"わたし", "katakana":"", "giai_thich_vn":"Tôi", "audio":"b1001", "vi_du":[
+                    					{"viet_cau":"",
+                    						"dich_cau":"Tôi là Quảng"}
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"私たち", "hiragana":"わたしたち", "katakana":"", "giai_thich_vn":"Chúng tôi, chúng ta... (ngôi thứ 1 số nhiều)", "audio":"b1002", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"あなた", "katakana":"", "giai_thich":"Bạn, anh, chị, ông, bà, cô chú.. (ngôi thứ 2 số ít)", "audio":"b1003", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"あなた", "katakana":"", "giai_thich_vn":"Bạn, anh, chị, ông, bà, cô chú.. (ngôi thứ 2 số ít)", "audio":"b1003", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"あなたがた", "katakana":"", "giai_thich":"Các bạn, các anh, các chị... (ngôi thứ 2 số nhiều)", "audio":"b1004", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"あなたがた", "katakana":"", "giai_thich_vn":"Các bạn, các anh, các chị... (ngôi thứ 2 số nhiều)", "audio":"b1004", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"人", "hiragana":"ひと", "katakana":"", "giai_thich":"Người", "audio":"b1005", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"人", "hiragana":"ひと", "katakana":"", "giai_thich_vn":"Người", "audio":"b1005", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"あの人", "hiragana":"あのひと", "katakana":"", "giai_thich":"Người ấy, người kia", "audio":"b1006", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"あの人", "hiragana":"あのひと", "katakana":"", "giai_thich_vn":"Người ấy, người kia", "audio":"b1006", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"方", "hiragana":"かた", "katakana":"", "giai_thich":"Cách nói lịch sự của (人): vị", "audio":"b1007", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"方", "hiragana":"かた", "katakana":"", "giai_thich_vn":"Cách nói lịch sự của (人): vị", "audio":"b1007", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"あの方", "hiragana":"あのかた", "katakana":"", "giai_thich":"Vị đó, vị kia", "audio":"b1008", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"あの方", "hiragana":"あのかた", "katakana":"", "giai_thich_vn":"Vị đó, vị kia", "audio":"b1008", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"皆さん", "hiragana":"みなさん", "katakana":"", "giai_thich":"Các bạn, các anh, các chị, mọi người...", "audio":"b1009", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"皆さん", "hiragana":"みなさん", "katakana":"", "giai_thich_vn":"Các bạn, các anh, các chị, mọi người...", "audio":"b1009", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"～さん", "katakana":"", "giai_thich":"Ông ~, bà ~, anh ~, chị ~... (đi kèm theo tên, dùng để gọi tên người khác một cách lịch sự)", "audio":"b1010", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"～さん", "katakana":"", "giai_thich_vn":"Ông ~, bà ~, anh ~, chị ~... (đi kèm theo tên, dùng để gọi tên người khác một cách lịch sự)", "audio":"b1010", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"～ちゃん", "katakana":"", "giai_thich":"(đi kèm theo tên để gọi tên các bé gái thay cho ～さん)", "audio":"b1011", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"～ちゃん", "katakana":"", "giai_thich_vn":"(đi kèm theo tên để gọi tên các bé gái thay cho ～さん)", "audio":"b1011", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"君", "hiragana":"～くん", "katakana":"", "giai_thich":"(đi kèm theo tên để gọi tên các bé trai thay cho ～さん)", "audio":"b1012", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"君", "hiragana":"～くん", "katakana":"", "giai_thich_vn":"(đi kèm theo tên để gọi tên các bé trai thay cho ～さん)", "audio":"b1012", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"～じん", "katakana":"", "giai_thich":"Đi kèm theo tên nước để chỉ người nước nào đó", "audio":"b1013", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"～じん", "katakana":"", "giai_thich_vn":"Đi kèm theo tên nước để chỉ người nước nào đó", "audio":"b1013", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"先生", "hiragana":"せんせい", "katakana":"", "giai_thich":"Thầy giáo, cô giáo, giáo viên (không dùng để chỉ nghề nghiệp mà đi kèm theo tên để gọi giáo viên)", "audio":"b1014", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"先生", "hiragana":"せんせい", "katakana":"", "giai_thich_vn":"Thầy giáo, cô giáo, giáo viên (không dùng để chỉ nghề nghiệp mà đi kèm theo tên để gọi giáo viên)", "audio":"b1014", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"教師", "hiragana":"きょうし", "katakana":"", "giai_thich":"Nhà giáo, giáo viên (dùng để chỉ nghề nghiệp)", "audio":"b1015", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"教師", "hiragana":"きょうし", "katakana":"", "giai_thich_vn":"Nhà giáo, giáo viên (dùng để chỉ nghề nghiệp)", "audio":"b1015", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"学生", "hiragana":"がくせい", "katakana":"", "giai_thich":"Học sinh, sinh viên (nói chung)", "audio":"b1016", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"学生", "hiragana":"がくせい", "katakana":"", "giai_thich_vn":"Học sinh, sinh viên (nói chung)", "audio":"b1016", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"会社員", "hiragana":"かいしゃいん", "katakana":"", "giai_thich":"Nhân viên công ty nói chung (dùng để chỉ nghề nghiệp)", "audio":"b1017", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"会社員", "hiragana":"かいしゃいん", "katakana":"", "giai_thich_vn":"Nhân viên công ty nói chung (dùng để chỉ nghề nghiệp)", "audio":"b1017", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"社員", "hiragana":"しゃいん", "katakana":"", "giai_thich":"Chỉ nhân viên của một công ty cụ thể", "audio":"b1018", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"社員", "hiragana":"しゃいん", "katakana":"", "giai_thich_vn":"Chỉ nhân viên của một công ty cụ thể", "audio":"b1018", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"銀行員", "hiragana":"ぎんこういん", "katakana":"", "giai_thich":"Nhân viên ngân hàng (chỉ nghề nghiệp)", "audio":"b1019", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"銀行員", "hiragana":"ぎんこういん", "katakana":"", "giai_thich_vn":"Nhân viên ngân hàng (chỉ nghề nghiệp)", "audio":"b1019", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"医者", "hiragana":"いしゃ", "katakana":"", "giai_thich":"Bác sĩ (nghề nghiệp)", "audio":"b1020", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"医者", "hiragana":"いしゃ", "katakana":"", "giai_thich_vn":"Bác sĩ (nghề nghiệp)", "audio":"b1020", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"研究者", "hiragana":"けんきゅしゃ", "katakana":"", "giai_thich":"Nhà nghiên cứu (nghề nghiệp)", "audio":"b1021", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"研究者", "hiragana":"けんきゅしゃ", "katakana":"", "giai_thich_vn":"Nhà nghiên cứu (nghề nghiệp)", "audio":"b1021", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"エンジニア", "giai_thich":"Kỹ sư", "audio":"b1022", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"エンジニア", "giai_thich_vn":"Kỹ sư", "audio":"b1022", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"研修し", "hiragana":"けんしゅうし", "katakana":"", "giai_thich":"Tu nghiệp sinh", "audio":"b1023", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"研修し", "hiragana":"けんしゅうし", "katakana":"", "giai_thich_vn":"Tu nghiệp sinh", "audio":"b1023", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"大学", "hiragana":"だいがく", "katakana":"", "giai_thich":"Đại học", "audio":"b1024", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"大学", "hiragana":"だいがく", "katakana":"", "giai_thich_vn":"Đại học", "audio":"b1024", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"病院", "hiragana":"びょういん", "katakana":"", "giai_thich":"Bệnh viện", "audio":"b1025", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"病院", "hiragana":"びょういん", "katakana":"", "giai_thich_vn":"Bệnh viện", "audio":"b1025", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"専門", "hiragana":"けんもん", "katakana":"", "giai_thich":"chuyên môn", "audio":"b1026", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"専門", "hiragana":"けんもん", "katakana":"", "giai_thich_vn":"chuyên môn", "audio":"b1026", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"電気", "hiragana":"でんき", "katakana":"", "giai_thich":"Điện, điện lực", "audio":"b1027", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"電気", "hiragana":"でんき", "katakana":"", "giai_thich_vn":"Điện, điện lực", "audio":"b1027", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"誰", "hiragana":"だれ", "katakana":"", "giai_thich":"Ai", "audio":"b1028", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"誰", "hiragana":"だれ", "katakana":"", "giai_thich_vn":"Ai", "audio":"b1028", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"どなた", "katakana":"", "giai_thich":"(cách nói lịch sự của だれ) Là người nào", "audio":"b1029", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"どなた", "katakana":"", "giai_thich_vn":"(cách nói lịch sự của だれ) Là người nào", "audio":"b1029", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"～歳", "hiragana":"さい", "katakana":"", "giai_thich":"~ tuổi", "audio":"b1030", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"～歳", "hiragana":"さい", "katakana":"", "giai_thich_vn":"~ tuổi", "audio":"b1030", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"何歳", "hiragana":"なんさう", "katakana":"", "giai_thich":"Mấy tuổi?", "audio":"b1031", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"何歳", "hiragana":"なんさう", "katakana":"", "giai_thich_vn":"Mấy tuổi?", "audio":"b1031", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"おいくつ", "katakana":"", "giai_thich":"Bao nhiêu tuổi (lịch sự hơn 何歳)?", "audio":"b1032", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"おいくつ", "katakana":"", "giai_thich_vn":"Bao nhiêu tuổi (lịch sự hơn 何歳)?", "audio":"b1032", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"はい", "katakana":"", "giai_thich":"Vâng, dạ, ừ", "audio":"b1033", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"はい", "katakana":"", "giai_thich_vn":"Vâng, dạ, ừ", "audio":"b1033", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"いいえ", "katakana":"", "giai_thich":"Không", "audio":"b1034", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"いいえ", "katakana":"", "giai_thich_vn":"Không", "audio":"b1034", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"会話", "hiragana":"かいわ", "katakana":"", "giai_thich":"Hội thoại", "audio":"b1035", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"会話", "hiragana":"かいわ", "katakana":"", "giai_thich_vn":"Hội thoại", "audio":"b1035", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"失礼ですが", "hiragana":"しつれですが", "katakana":"", "giai_thich":"Xin lỗi, tôi xin thất lễ", "audio":"b1036", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"失礼ですが", "hiragana":"しつれですが", "katakana":"", "giai_thich_vn":"Xin lỗi, tôi xin thất lễ", "audio":"b1036", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"お名前は", "hiragana":"おなまえは？", "katakana":"", "giai_thich":"Tên bạn là gì?", "audio":"b1037", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"お名前は", "hiragana":"おなまえは？", "katakana":"", "giai_thich_vn":"Tên bạn là gì?", "audio":"b1037", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"はじめまして", "katakana":"", "giai_thich":"Xin chào anh (dùng khi lần đầu tiên gặp mặt)", "audio":"b1038", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"はじめまして", "katakana":"", "giai_thich_vn":"Xin chào anh (dùng khi lần đầu tiên gặp mặt)", "audio":"b1038", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"どうぞよろしく　「お願いします」", "hiragana":"どうぞよろしく　「おねがいします」", "katakana":"", "giai_thich":"Từ nay mong anh giúp đỡ", "audio":"b1039", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"どうぞよろしく　「お願いします」", "hiragana":"どうぞよろしく　「おねがいします」", "katakana":"", "giai_thich_vn":"Từ nay mong anh giúp đỡ", "audio":"b1039", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"こちらわ～さんです", "katakana":"", "giai_thich":"Đây là anh (chị) ~ (dùng khi giới thiệu người khác)", "audio":"b1040", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"こちらわ～さんです", "katakana":"", "giai_thich_vn":"Đây là anh (chị) ~ (dùng khi giới thiệu người khác)", "audio":"b1040", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"～から　きました", "katakana":"", "giai_thich":"(tôi) đến từ ~", "audio":"b1041", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"～から　きました", "katakana":"", "giai_thich_vn":"(tôi) đến từ ~", "audio":"b1041", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"アメリカ", "giai_thich":"Nước Mỹ", "audio":"b1042", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"アメリカ", "giai_thich_vn":"Nước Mỹ", "audio":"b1042", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"イギリス", "giai_thich":"Nước Anh", "audio":"b1043", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"イギリス", "giai_thich_vn":"Nước Anh", "audio":"b1043", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"インド", "giai_thich":"Nước Ấn Độ", "audio":"b1044", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"インド", "giai_thich_vn":"Nước Ấn Độ", "audio":"b1044", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"インドネシア", "giai_thich":"Nước Indonesia", "audio":"b1045", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"インドネシア", "giai_thich_vn":"Nước Indonesia", "audio":"b1045", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"マレーシア", "giai_thich":"Nước Malaysia", "audio":"b1046", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"マレーシア", "giai_thich_vn":"Nước Malaysia", "audio":"b1046", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"韓国", "hiragana":"かんこく", "katakana":"", "giai_thich":"Nước Hàn Quốc", "audio":"b1047", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"韓国", "hiragana":"かんこく", "katakana":"", "giai_thich_vn":"Nước Hàn Quốc", "audio":"b1047", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾀｲ", "giai_thich":"Nước Thái Lan", "audio":"b1048", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾀｲ", "giai_thich_vn":"Nước Thái Lan", "audio":"b1048", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"中国", "hiragana":"ちゅごく", "katakana":"", "giai_thich":"Nươc Trung Quốc", "audio":"b1049", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"中国", "hiragana":"ちゅごく", "katakana":"", "giai_thich_vn":"Nươc Trung Quốc", "audio":"b1049", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾌｨﾘﾋﾟﾝ", "giai_thich":"Nước Philipin", "audio":"b1050", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾌｨﾘﾋﾟﾝ", "giai_thich_vn":"Nước Philipin", "audio":"b1050", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾄﾞｲﾂ", "giai_thich":"Nước Đức", "audio":"b1051", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾄﾞｲﾂ", "giai_thich_vn":"Nước Đức", "audio":"b1051", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"日本", "hiragana":"にほん", "katakana":"", "giai_thich":"Nước Nhật Bản", "audio":"b1052", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"日本", "hiragana":"にほん", "katakana":"", "giai_thich_vn":"Nước Nhật Bản", "audio":"b1052", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾌﾗﾝｽ", "giai_thich":"Nước Pháp", "audio":"b1053", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾌﾗﾝｽ", "giai_thich_vn":"Nước Pháp", "audio":"b1053", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾌﾞﾗｼﾞｽ", "giai_thich":"Nước Brazil", "audio":"b1054", "vi_du":[
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾌﾞﾗｼﾞｽ", "giai_thich_vn":"Nước Brazil", "audio":"b1054", "vi_du":[
+                    
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""},
+                    				{"kanji":"", "hiragana":"", "katakana":"ﾍﾞﾄﾅﾑ", "giai_thich_vn":"Nước Việt Nam", "audio":"b1055", "vi_du":[
 
-				], "bo_kanji":"私 - TU"},
-				{"kanji":"", "hiragana":"", "katakana":"ﾍﾞﾄﾅﾑ", "giai_thich":"Nước Việt Nam", "audio":"b1055", "vi_du":[
-
-				], "bo_kanji":"私 - TU"}
-			],
+                    				], "bo_kanji":"私 - TU", "giai_thich_en":"", "giai_thich_jp":"",  "id": 0, "code": 0, "romaji":""}
+                    			]
+				},
 			"ngu_phap":[
 				{
 					"tieu_de":"1. N1 は N2 です",

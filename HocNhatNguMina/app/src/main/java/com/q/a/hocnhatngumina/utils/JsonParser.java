@@ -1,7 +1,5 @@
 package com.q.a.hocnhatngumina.utils;
 
-import android.util.Log;
-
 import com.q.a.hocnhatngumina.models.HoiThoai;
 import com.q.a.hocnhatngumina.models.LuyenNghe;
 import com.q.a.hocnhatngumina.models.NguPhap;
@@ -24,20 +22,21 @@ public class JsonParser {
 
     public static List<TuVung> getTuVungList(String jsonString) {
         List<TuVung> ls = new ArrayList<>();
-
         try {
             JSONArray tuVungs = new JSONArray(jsonString);
             for (int i = 0; i < tuVungs.length(); i++) {
                 JSONObject oi = tuVungs.getJSONObject(i);
                 TuVung tv = new TuVung();
-                tv.setCode(1);
-                tv.setId(i);
+                tv.setCode(oi.getInt("code"));
+                tv.setId(oi.getInt("id"));
                 tv.setKanji(oi.getString("kanji").length() == 0 ? "null" : oi.getString("kanji"));
                 tv.setHiragana(oi.getString("hiragana").length() == 0 ? "null":oi.getString("hiragana") );
                 tv.setKatakana(oi.getString("katakana").length() == 0 ? "null" : oi.getString("katakana"));
-                tv.setMeanVI(oi.getString("giai_thich").length() == 0 ? "null" : oi.getString("giai_thich"));
+                tv.setMeanVI(oi.getString("giai_thich_vn").length() == 0 ? "null" : oi.getString("giai_thich_vn"));
+                tv.setMeanEN(oi.getString("giai_thich_en").length() == 0 ? "null" : oi.getString("giai_thich_en"));
+                tv.setMeanJP(oi.getString("giai_thich_jp").length() == 0 ? "null" : oi.getString("giai_thich_jp"));
                 tv.setAudioName(oi.getString("audio"));
-                tv.setRomaji("null");
+                tv.setRomaji(oi.getString("romaji"));
                 tv.setTenBoKanji(oi.getString("bo_kanji"));
                 tv.setBoKanji(oi.getString("bo_kanji"));
                 JSONArray viDus = oi.getJSONArray("vi_du");
@@ -48,13 +47,13 @@ public class JsonParser {
                     vd.setDichCau(ok.getString("dich_cau"));
                     tv.getViDus().add(vd);
                 }
+//                Log.i("tv", tv.toString());
                 ls.add(tv);
             }
 
         } catch (Exception e){
-            while (true) {
-                Log.e("error", "JsonParser class on line 59" + e.getMessage());
-            }
+
+            e.printStackTrace();
         }
         return ls;
     }
