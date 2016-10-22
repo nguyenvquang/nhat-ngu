@@ -1,11 +1,13 @@
 package com.q.a.hocnhatngumina.adapters;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.q.a.hocnhatngumina.R;
 import com.q.a.hocnhatngumina.database.AppDb;
@@ -162,7 +164,6 @@ public class TuVungAdapter extends AbstractBaseAdapter {
             }
         });
 
-        ((TextView)vh.getItem(1)).setText(TextFormat.textColor(mString, "blue"));
 
     }
 
@@ -178,7 +179,7 @@ public class TuVungAdapter extends AbstractBaseAdapter {
                 String data = "";
                 AppDb appDb = new AppDb(mContext);
                 Cursor cursor = appDb.queryTbBaiHoc(mLession);
-//                if (cursor == null || (cursor != null && cursor.moveToFirst() && cursor.getString(AppDb.COL_TU_VUNG) == null)) {
+                if (cursor.getCount() == 0 || (cursor != null && cursor.moveToFirst() && cursor.getString(AppDb.COL_TU_VUNG) == null)) {
                     InputStream inputStream = mContext.getAssets().open("data/data.txt");
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                     int length = 0;
@@ -198,7 +199,14 @@ public class TuVungAdapter extends AbstractBaseAdapter {
                     values.put("bai_hoc", mLession);
                     appDb.getWritableDatabase().insert(AppDb.TB_BAI_HOC, null, values);
                     cursor = appDb.queryTbBaiHoc(mLession);
-//                }
+                } else {
+                    ((Activity)mContext).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(mContext, "NULL", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
 
                 if (cursor != null && cursor.moveToFirst()) {
                     do {
